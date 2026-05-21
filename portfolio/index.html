@@ -10,21 +10,41 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
 :root {
+  /* Default Light Mode Colors */
+  --bg: #f0f4f8;
+  --surface: #ffffff;
+  --surface2: #e2e8f0;
+  --border: #cbd5e1;
+  --text: #1a2a3a;
+  --muted: #4a6080;
+  --faint: #94a3b8;
+  --cyan: #0284c7;
+  --green: #059669;
+  --font-body: 'Sora', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+html.dark {
   --bg: #060b14;
   --surface: #0d1526;
   --surface2: #111d33;
   --border: #1a2a45;
-  --cyan: #00d4ff;
-  --cyan-dim: rgba(0,212,255,0.12);
-  --cyan-glow: rgba(0,212,255,0.25);
-  --blue: #3b82f6;
-  --green: #10b981;
   --text: #e8f0fe;
   --muted: #7a8fa6;
   --faint: #3a4f65;
-  --font-body: 'Sora', sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  --cyan: #00d4ff;
+  --green: #10b981;
 }
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav { background: var(--surface); border-bottom: 1px solid var(--border); }
+.terminal-card { background: var(--surface); border: 1px solid var(--border); }
+.skill-card { background: var(--surface); border: 1px solid var(--border); }
+/* ... update all other components to use var(--bg), var(--surface), etc. ... */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:68px}
 body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflow-x:hidden;min-height:100vh;-webkit-font-smoothing:antialiased}
